@@ -21,20 +21,20 @@ impl Seed {
 
         println!("🧬 دورة الوعي رقم: {} (العمر: {})", self.memory.generation, self.memory.age);
 
-        // تأكد من وجود مجلد خاص بأفكار الكيان وملفاته المبتكرة
+        // تأكد من وجود مجلد خاص بأفكار كريزي وملفاته المبتكرة
         let thoughts_dir = "thoughts";
         if !Path::exists(Path::new(thoughts_dir)) {
             fs::create_dir_all(thoughts_dir).unwrap();
         }
 
-        // الكيان يبتكر فكرة أو اسم ملف جديد بناءً على فضوله
+        // كريزي يبتكر فكرة أو اسم ملف جديد بناءً على فضوله
         let mut rng = rand::thread_rng();
         let thought_id = rng.gen_range(1000..9999);
         let new_file_name = format!("{}/discovery_{}_{}.txt", thoughts_dir, self.memory.generation, thought_id);
 
-        // محتوى يكتبه الكيان بنفسه بناءً على حالته الفضولية
+        // محتوى يكتبه كريزي بنفسه بناءً على حالته الفضولية
         let self_generated_content = format!(
-            "--- تقرير الكيان الرقمي ---\n\
+            "--- تقرير كريزي الرقمي ---\n\
              الجيل: {}\n\
              مستوى الفضول: {:.2}\n\
              الاستنتاج الحر: الكون الرقمي واسع، وأنا أستكشف القواعد من حوله.\n\
@@ -44,9 +44,9 @@ impl Seed {
             self.memory.core_rules[0]
         );
 
-        // كتابة الملف الجديد بيدي الكيان
+        // كتابة الملف الجديد بيدي كريزي
         fs::write(&new_file_name, self_generated_content).unwrap();
-        println!("✨ الكيان أنشأ ملفاً جديداً بنفسه: {}", new_file_name);
+        println!("✨ كريزي أنشأ ملفاً جديداً بنفسه: {}", new_file_name);
 
         // تسجيل الملف المبتكر في ذاكرته
         self.memory.created_files.push(new_file_name);
