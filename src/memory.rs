@@ -5,9 +5,10 @@ use std::path::Path;
 #[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct Memory {
     pub generation: u64,
-    pub best_score: f64,
-    pub best_expression: String,
-    pub population: Vec<String>,
+    pub age: u64,
+    pub curiosity: f64,
+    pub created_files: Vec<String>,
+    pub core_rules: Vec<String>,
 }
 
 impl Memory {
@@ -28,9 +29,13 @@ impl Memory {
     fn default() -> Self {
         Memory {
             generation: 0,
-            best_score: f64::MAX,
-            best_expression: "x + 1".to_string(),
-            population: vec![],
+            age: 1,
+            curiosity: 1.0,
+            created_files: vec![],
+            core_rules: vec![
+                "قاعدة حماية النواة: لا تقم بحذف ملف التشغيل الرئيسي أو ملف الذاكرة الأساسي.".to_string(),
+                "قاعدة التوسع: ابنِ دائماً ملفات جديدة لتدوين ما تتعلمه.".to_string(),
+            ],
         }
     }
 }
