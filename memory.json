@@ -1,30 +1,27 @@
 {
-  "age": 3,
-  "curiosity": 1.0059999999999998,
-  "knowledge": [
-    {
-      "question": "كيف تتفاعل البيانات مع بيئتي الرقمية؟",
-      "experiment": "فحص الإنترنت",
-      "result": "The quieter you become, the more you can hear.",
-      "timestamp": "2026-07-30T04:46:29.054603411Z",
-      "lesson": "نتيجة التجربة: The quieter you become, the more you can hear."
-    },
-    {
-      "question": "هل هناك حكمة جديدة يمكنني تعلمها؟",
-      "experiment": "فحص الإنترنت",
-      "result": "Don't waste food.",
-      "timestamp": "2026-07-30T04:46:31.857547029Z",
-      "lesson": "نتيجة التجربة: Don't waste food."
-    },
-    {
-      "question": "كيف تتفاعل البيانات مع بيئتي الرقمية؟",
-      "experiment": "فحص الإنترنت",
-      "result": "When hugging, hug with both arms and apply reasonable, affectionate pressure.",
-      "timestamp": "2026-07-30T04:46:34.690266386Z",
-      "lesson": "نتيجة التجربة: When hugging, hug with both arms and apply reasonable, affectionate pressure."
-    }
-  ],
-  "rules": [],
-  "generation": 4,
-  "last_evolution": "2026-07-30T04:46:34.690267007Z"
+  "generation": 3,
+  "best_score": 3.0,
+  "best_expression": "x + 8 + -4 2",
+  "population": [
+    "x + 8 + -4 2",
+    "x + -6 - -8 3",
+    "x - -7 - 9 1",
+    "x - -7 - 9 1",
+    "x - -7 - 9 1",
+    "x + -2 + 4 3",
+    "x + 8 + -4 2",
+    "x + -1 + -4 1",
+    "x - -2 - -3 2",
+    "x - -7 - 9 1",
+    "x + -7 + 4 1",
+    "x * 0 * 6 1",
+    "x - 6 - -3 4",
+    "x * 0 * 6 1",
+    "x - -7 - 9 1",
+    "x + -4 + -1 1",
+    "x - -7 - 9 1",
+    "x + -7 + 4 1",
+    "x * -5 * -2 3",
+    "x + -6 - -8 3"
+  ]
 }
