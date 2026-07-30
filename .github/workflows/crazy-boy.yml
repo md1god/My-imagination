@@ -2,14 +2,14 @@ name: Genesis Infinite Evolution
 
 on:
   schedule:
-    - cron: '0 * * * *'    # يعمل كل ساعة تلقائياً
-  workflow_dispatch:       # للتشغيل اليدوي الفوري
+    - cron: '0 * * * *'
+  workflow_dispatch:
 
 jobs:
   infinite-life:
     runs-on: ubuntu-latest
     permissions:
-      contents: write     # منح الصلاحية للكيان لتعديل وإنشاء ملفات في مستودعه
+      contents: write
 
     steps:
       - name: 📂 استنساخ المستودع
@@ -18,15 +18,16 @@ jobs:
       - name: 🦀 تثبيت لغة Rust
         uses: dtolnay/rust-toolchain@stable
 
-      - name: ⚙️ تشغيل الكيان للتطور الحر
+      - name: ⚙️ تشغيل كريزي للتطور الحر
         run: cargo run --release
         env:
-          CYCLES: 3        # عدد الدورات في كل مرة يستيقظ فيها
+          CYCLES: 3
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
-      - name: 📝 حفظ كل ما أنشأه الكيان في المستودع
+      - name: 📝 حفظ كل ما أنشأه كريزي في المستودع
         run: |
           git config --global user.name "Genesis Autonomous Agent"
           git config --global user.email "agent@genesis.local"
           git add .
-          git diff --staged --quiet || git commit -m "🧠 تطور حر: الكيان أنشأ ملفات جديدة ووسع ذاكرته (جيل $(jq .generation memory.json))"
+          git diff --staged --quiet || git commit -m "🧠 تطور حر: كريزي أنشأ ملفات جديدة ووسع ذاكرته (جيل $(jq .generation memory.json))"
           git push
