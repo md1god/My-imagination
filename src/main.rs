@@ -5,7 +5,7 @@ use seed::Seed;
 use std::env;
 
 fn main() {
-    println!("🌱 Genesis Seed بدأ الحياة على السحابة");
+    println!("🌱 Genesis Seed بدأ التطور الذاتي الجيني");
     let file_path = "memory.json";
     let mut seed = Seed::new(file_path);
 
@@ -18,5 +18,5 @@ fn main() {
         println!("\n--- دورة الحوسبة السحابية {} ---", i + 1);
         seed.cycle();
     }
-    println!("✅ اكتملت الدورات وحُفظت الذاكرة.");
+    println!("✅ اكتملت الدورات وحُفظت الذاكرة الجينية.");
 }
